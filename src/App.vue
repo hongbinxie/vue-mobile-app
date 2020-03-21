@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    视图层
+  <div>
+      <keep-alive>
+      	<router-view></router-view>
+      </keep-alive>
   </div>
 </template>
-
-
