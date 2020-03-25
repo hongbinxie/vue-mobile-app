@@ -10,9 +10,12 @@
 
 		<div class='banner-header'>
 			<div class='banner-top'>
-				<div class='top-left'>
-					北京
-					<i class='iconfont'>&#xe6aa;</i>
+				<div 
+				     class='top-left' 
+					 @click='toCity'	<!--1.-->
+				>
+				    北京
+				    <i class='iconfont'>&#xe6aa;</i>
 				</div>
 				<div class='top-search'>
 					<i class='iconfont'>&#xe64d;</i>
@@ -66,6 +69,11 @@ export default{
 	methods:{
 		toShow(){
 			this.toshow=!this.toshow;
+		},
+		toCity(){			
+			this.$router.push({		
+				path:"/city"	
+			})
 		}
 	}
 }

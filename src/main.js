@@ -3,26 +3,25 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-//fastClick
+//reset.css ==>重置样式
+import './assets/css/reset.css'
+//fastClick ==>解决click事件在移动端300ms延迟的问题
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
-//适配font.js文件
-import './assets/js/font.js'
-//axios
-import axios from 'axios'
-Vue.prototype.axios = axios
-
-//reset.css
-import './assets/css/reset.css'
-//字体图标
+//引入字体图标
 import './assets/css/iconfont.css'
-//animate.css
-import animate from 'animate.css'
-
-//swiper
+//引入适配font.js文件
+import './assets/js/font.js'
+//引入swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 import './assets/css/swiper.css'
+//引入动画库animate.css
+import animate from 'animate.css'
+//引入axios
+import axios from 'axios'
+Vue.prototype.axios = axios
+
 
 Vue.config.productionTip = false
 
