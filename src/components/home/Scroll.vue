@@ -15,7 +15,7 @@
 
 <script>
 export default{
-	data() {
+	data () {
 		return{
 			aniamtedTop:false,
 			scrollList:[
@@ -63,21 +63,21 @@ export default{
 </script>
 
 <style scoped>
-.aniamtedTop {
+.aniamtedTop{
 	transition: all .5s;
 	margin-top:-.66666666rem;
 }
-.scroll {
+.scroll{
 	padding:.3rem 0;
 }
-.scroll-content {
+.scroll-content{
 	background: url('http://localhost:8080/img/scroll.png') no-repeat;
 	background-size:100%;
 	width: 100%;
 	height: 1.3333333rem;
 	position: relative;
 }
-.scroll-right {
+.scroll-right{
 	position: absolute;
 	right:0;
 	width: 8.13333333rem;
@@ -85,7 +85,7 @@ export default{
 	overflow: hidden;
 }
 
-li {
+li{
 	font-size:.35rem;
 	color:#333;
 	line-height: .66666666rem;
@@ -93,7 +93,7 @@ li {
 	text-overflow:ellipsis;
 	white-space: nowrap;
 }
-li img {
+li img{
 	width: .16rem;
 	height: .16rem;
 }

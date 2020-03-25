@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import Banner from './Banner'
 import Icons from './Icons'
 import Tabs from './Tabs'
@@ -31,30 +32,45 @@ export default{
 		Like,
 		Footer
 	},
-	data() {
+	data () {
 		return {
 			spikeList:[],
 			likeList:[],
+			changeCity:''
 		}
+	},
+	computed:{
+		...mapState(["cityName"])
 	},
 	methods:{
 		http(){
 			let That = this;
 			this.axios.get("http://localhost:8080/api/dataHome.json")
 			.then((res)=>{
-				let data = res.data.data[0];
-				That.spikeList = data.spikeList;
-				That.likeList = data.likeList
+				let data = res.data.data;
+				data.forEach((item,index)=>{
+					if(item.city == That.cityName){
+						That.spikeList = item.spikeList;
+						That.likeList = item.likeList
+					}
+				})
 			})
 		}
 	},
 	mounted(){
+		this.changeCity = this.cityName;
 		this.http();
+	},
+	activated(){
+		if(this.changeCity!=this.cityName){
+			this.http();
+			this.changeCity=this.cityName;
+		}
 	}
 }
 </script>
 <style scoped>
-.home {
+.home{
 	overflow: hidden;
 }	
 </style>

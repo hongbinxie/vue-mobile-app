@@ -21,7 +21,7 @@
 </template>
 <script>
 export default{
-	data() {
+	data () {
 		return {
 			TabsList:[
 				{
@@ -85,20 +85,20 @@ export default{
 </script>
 
 <style scoped>
-.tabs {
+.tabs{
 	padding:.3rem 0;
 }
-.tabs-content {
+.tabs-content{
 
 }
-.tabs-content img {
+.tabs-content img{
 	margin-left:auto;
 	margin-right: auto;
 	display: block;
 	width: .7733333333rem;
 	height: .7733333333rem;
 }
-.tabs-content p {
+.tabs-content p{
 	margin-top:.1rem;
 	text-align: center;
 	font-size:.3rem;

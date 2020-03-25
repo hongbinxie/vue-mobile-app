@@ -17,7 +17,7 @@
 
 <script>
 export default{
-	data() {
+	data () {
 		return {
 			swiperOption:{
 				pagination:{
@@ -30,19 +30,19 @@ export default{
 </script>
 
 <style scoped>
-.swiper {
+.swiper{
 	background: #fff9db;
 	width: 100%;
 	height: 3.2rem;
 }
-.swiper img {
+.swiper img{
 	width: 100%;
 	height: 3.2rem;
 }
-.swiper-pagination >>> .swiper-pagination-bullet-active {
+.swiper-pagination >>> .swiper-pagination-bullet-active{
 	background: orange;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
 	bottom:4px;
 }
 </style>

@@ -15,7 +15,7 @@
 	</footer>
 </template>
 <style scoped>
-footer {
+footer{
 	position: fixed;
 	bottom:0;
 	z-index:9999;
@@ -26,19 +26,19 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
-footer a {
+footer a{
 	flex:1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
-footer a img {
+footer a img{
 	width: .72rem;
 	height: .72rem;
 	display: block;
 }
-footer a span {
+footer a span{
 	display: block;
 	font-size:.35rem;
 	margin-top:.2rem;

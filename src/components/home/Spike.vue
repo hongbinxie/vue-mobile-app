@@ -1,4 +1,3 @@
-<!--http://www.3mooc.com/-->
 <template>
 	<div class='spike'>
 		<swiper :options="swiperOption">

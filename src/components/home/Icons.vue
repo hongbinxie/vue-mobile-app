@@ -11,7 +11,7 @@
 
 <script>
 export default{
-	data() {
+	data () {
 		return {
 			iconsList:[
 				{
@@ -71,30 +71,31 @@ export default{
 </script>
 
 <style scoped>
-.icons {
+.icons{
 	padding-top:.4rem;
 	padding-bottom:.1rem;
 	border-bottom:1px solid #eee;
 }
-ul {
+ul{
 	overflow: hidden;
 }
-ul li {
+ul li{
 	width: 20%;
 	float:left;
 	margin-bottom:.4rem;
 }
-ul li img {
+ul li img{
 	margin-left:auto;
 	margin-right: auto;
 	display: block;
 	width: 1.0666666667rem;
 	height: 1.0666666667rem;
 }
-ul li p {
+ul li p{
 	font-size:.3733333333rem;
 	text-align: center;
 	margin-top:.1rem;
 	color:#333;
 }
+
 </style>
