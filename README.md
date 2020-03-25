@@ -64,9 +64,13 @@
         │   	Like.vue
         │   	Footer.vue
         └───city...............城市列表页目录
-        │   	Home.vue.......城市列表页入口文件	
-        		...待完善
-        ...待完善							
+        │   	City.vue.......城市列表页入口文件	   
+        │   	Header.vue
+        │		List.vue
+        └───details............详情页目录
+        │		Details.vue.......城市列表页入口文件	   
+        │   	Header.vue
+        └───	Banner.vue						
 ```
 
 ## 4.Vue 插件或第三方库
