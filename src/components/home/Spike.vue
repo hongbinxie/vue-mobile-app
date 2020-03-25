@@ -1,10 +1,14 @@
+<!--http://www.3mooc.com/-->
 <template>
 	<div class='spike'>
 		<swiper :options="swiperOption">
 		    <!-- slides -->
 		   
 		    <swiper-slide v-for='item in spikeList'> 
-				<div class='spike-content'>
+				<div 
+					class='spike-content'
+					@click='toDetails(item)'
+				>
 					<div class='spike-top'>
 						<img src="@/assets/img/spike1.png">
 						<span>距离结束</span>	
@@ -45,7 +49,7 @@ export default{
 	components:{
 		CountDown,
 	},
-	data() {
+	data () {
 		return {
 			swiperOption:{
 				pagination:{
@@ -53,33 +57,44 @@ export default{
 				}
 			}
 		}
+	},
+	methods:{
+		toDetails(item){
+			this.$router.push({
+				path:"/details",
+				query:{
+					item
+				}
+			})
+		}
 	}
 }
 </script>
 
 <style scoped>
-.spike {
+.spike{
 	width: 100%;
 	height: 4.377777rem;
 }
-.spike-content {
+.spike-content{
+
 	padding:.3rem;
 }
-.spike-top {
+.spike-top{
 	width: 100%;
 	height: 1.2933333rem;
 	display: flex;
 	align-items: center;
 	font-size:.35rem;
 }
-.spike-top img {
+.spike-top img{
 	height: .41333333rem;
 	width: 1.89333333rem;
 }
-.spike-top span {
+.spike-top span{
 	margin-left:.15rem;
 }
-.spike-top > div {
+.spike-top > div{
 	margin-left:.15rem;
 }
 .spike-top >>> div span {
@@ -89,19 +104,19 @@ export default{
     background: #8b8b8b;
     padding:0 .1rem;
 }
-.spike-bottom {
+.spike-bottom{
 	display: flex;
 	justify-content: space-between;
 }
-.spike-bottom img {
+.spike-bottom img{
 	width: 3.093333rem;
 	height: 2.12rem;
 }
-.spike-bottom .bottom-title {
+.spike-bottom .bottom-title{
 	width: 5.86rem;
 }	
 
-.bottom-title p {
+.bottom-title p{
 	line-height: .38rem;
     font-size: .35rem;
     color: #333;
@@ -110,26 +125,26 @@ export default{
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
-.bottom-price {
+.bottom-price{
 	margin-top:.8rem;
 	display: flex;
 	justify-content: space-between;
 	font-size: .35rem;
 }
-.bottom-price p {
+.bottom-price p{
 	padding:.1rem;
 	border: 1px solid #444;
     border-radius: .1rem;
     background: #fed101;
 }
 
-.swiper-container {
+.swiper-container{
 	overflow: visible;
 }
-.swiper-pagination >>> .swiper-pagination-bullet-active {
+.swiper-pagination >>> .swiper-pagination-bullet-active{
 	background: orange;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
 	bottom:-.8rem;
 }
 </style>
