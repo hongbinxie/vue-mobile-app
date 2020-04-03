@@ -2,8 +2,10 @@
 
 ## 1.项目描述
 
-1. 该项目设定为一个简单的移动端 Vue（SPA）项目，请求的数据是用json文件模拟的。
+1. 该项目设定为一个简单的移动端 Vue（SPA）项目
 2. 使用了Vue2+Vue Router+Vuex，搭配了一些第三方库、Vue 插件来进行实现
+3. 需要说明的一点：请求的数据是mock的，仅录入了北京、上海城市的数据。
+4. 实现的页面：首页、城市列表页、详情页。
 
 ## 2.项目运行
 
@@ -91,11 +93,11 @@
         │   	Like.vue
         │   	Footer.vue
         └───city...............城市列表页目录
-        │   	City.vue.......城市列表页入口文件	   
+        │   	City.vue.......城市列表页入口文件
         │   	Header.vue
         │		List.vue
         └───details............详情页目录
-        │		Details.vue.......详情页入口文件	   
+        │		Details.vue.......详情页入口文件
         │   	Header.vue
         └───	Banner.vue						
 ```
@@ -114,4 +116,6 @@
 
 6. 使用 fastClick 解决click事件在移动端300ms延迟的问题
 
-   
+7. 使用 vue2-countdown 实现秒杀功能
+
+    
